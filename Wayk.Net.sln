@@ -1,15 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2047
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wayk.Net", "Wayk.Net\Wayk.Net.csproj", "{B5732D0E-4425-4AD2-9E62-F1731D04A5B2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wayk.Net.Cli", "Wayk.Net.Cli\Wayk.Net.Cli.csproj", "{9CA0518A-F3E3-4C37-982A-7D230CFDFB95}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wayk.Net.Wpf", "Wayk.Net.Wpf\Wayk.Net.Wpf.csproj", "{941D28E9-0B53-41D9-A27B-64F5D815C7A5}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wayk.Net.WinForms", "Wayk.Net.WinForms\Wayk.Net.WinForms.csproj", "{38366C58-4B45-450F-AEEF-5F0DB71F2C49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,18 +15,6 @@ Global
 		{B5732D0E-4425-4AD2-9E62-F1731D04A5B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5732D0E-4425-4AD2-9E62-F1731D04A5B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5732D0E-4425-4AD2-9E62-F1731D04A5B2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9CA0518A-F3E3-4C37-982A-7D230CFDFB95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9CA0518A-F3E3-4C37-982A-7D230CFDFB95}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9CA0518A-F3E3-4C37-982A-7D230CFDFB95}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9CA0518A-F3E3-4C37-982A-7D230CFDFB95}.Release|Any CPU.Build.0 = Release|Any CPU
-		{941D28E9-0B53-41D9-A27B-64F5D815C7A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{941D28E9-0B53-41D9-A27B-64F5D815C7A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{941D28E9-0B53-41D9-A27B-64F5D815C7A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{941D28E9-0B53-41D9-A27B-64F5D815C7A5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{38366C58-4B45-450F-AEEF-5F0DB71F2C49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{38366C58-4B45-450F-AEEF-5F0DB71F2C49}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{38366C58-4B45-450F-AEEF-5F0DB71F2C49}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{38366C58-4B45-450F-AEEF-5F0DB71F2C49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
