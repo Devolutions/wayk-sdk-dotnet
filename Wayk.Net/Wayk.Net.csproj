@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B5732D0E-4425-4AD2-9E62-F1731D04A5B2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Devolutions.Wayk</RootNamespace>
+    <AssemblyName>Wayk.Net</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enums\MouseButtons.cs" />
+    <Compile Include="Extensions\InputExtensions.cs" />
+    <Compile Include="Hooks\KeyboardHook.cs" />
+    <Compile Include="Native\Kernel32.cs" />
+    <Compile Include="Native\NativeNow.cs" />
+    <Compile Include="Native\NativeNow.Delegates.cs" />
+    <Compile Include="Native\NativeNowAccessControl.cs" />
+    <Compile Include="Native\NativeNowAuth.cs" />
+    <Compile Include="Native\NativeNowCert.cs" />
+    <Compile Include="Native\NativeNowCertStore.cs" />
+    <Compile Include="Native\NativeNowClipboardChannel.cs" />
+    <Compile Include="Native\NativeNowClipboardChannelEx.cs" />
+    <Compile Include="Native\NativeNowCodec.cs" />
+    <Compile Include="Native\NativeNowContext.cs" />
+    <Compile Include="Native\NativeNowDen.cs" />
+    <Compile Include="Native\NativeNowExecChannel.cs" />
+    <Compile Include="Native\NativeNowFileTransfer.cs" />
+    <Compile Include="Native\NativeNowFileTransferChannel.cs" />
+    <Compile Include="Native\NativeNowFileTransferSessionContext.cs" />
+    <Compile Include="Native\NativeNowI18n.cs" />
+    <Compile Include="Native\NativeNowInput.cs" />
+    <Compile Include="Native\NativeNowKeyboard.cs" />
+    <Compile Include="Native\NativeNowLicense.cs" />
+    <Compile Include="Native\NativeNowPfp.cs" />
+    <Compile Include="Native\NativeNowProto.cs" />
+    <Compile Include="Native\NativeNowSettings.cs" />
+    <Compile Include="Native\NativeNowShared.cs" />
+    <Compile Include="Native\NativeNowSharee.cs" />
+    <Compile Include="Native\NativeNowStatus.cs" />
+    <Compile Include="Native\NativeNowSurfaceManager.cs" />
+    <Compile Include="Native\NativeNowTie.cs" />
+    <Compile Include="Native\NativeNowTransport.cs" />
+    <Compile Include="Native\NativeNowUpdateGraphicsMsg.cs" />
+    <Compile Include="Native\NativeNowWinPR.cs" />
+    <Compile Include="Native\NowState.cs" />
+    <Compile Include="Native\User32.cs" />
+    <Compile Include="Native\WindowMessage.cs" />
+    <Compile Include="Now\NowAuth.Callbacks.cs" />
+    <Compile Include="Now\NowAuth.cs" />
+    <Compile Include="Now\NowAuthType.cs" />
+    <Compile Include="Now\NowChannel.cs" />
+    <Compile Include="Now\NowClipboardChannel.cs" />
+    <Compile Include="Now\NowCodec.cs" />
+    <Compile Include="Now\NowDen.cs" />
+    <Compile Include="Now\NowExecChannel.cs" />
+    <Compile Include="Now\NowFileTransferChannel.cs" />
+    <Compile Include="Now\NowGraphicsUpdateEventArgs.cs" />
+    <Compile Include="Now\NowI18n.cs" />
+    <Compile Include="Now\NowKeyboard.Callbacks.cs" />
+    <Compile Include="Now\NowKeyboard.cs" />
+    <Compile Include="Now\NowLicense.cs" />
+    <Compile Include="Now\NowObject.cs" />
+    <Compile Include="Now\NowPfp.cs" />
+    <Compile Include="Now\NowSharee.Callbacks.cs" />
+    <Compile Include="Now\NowSharee.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Now\NowNativeContextDictionary.cs" />
+    <Compile Include="Utilities\NativeLibraryHelper.cs" />
+    <Compile Include="WinForms\WaykControl.cs" />
+    <Compile Include="WinForms\WaykControl.Designer.cs">
+      <DependentUpon>WaykControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wpf\Renderer.cs" />
+    <Compile Include="Wpf\WaykControl.xaml.cs">
+      <DependentUpon>WaykControl.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Lib\x64\DevolutionsWayk.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Lib\x86\DevolutionsWayk.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Page Include="Wpf\WaykControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
