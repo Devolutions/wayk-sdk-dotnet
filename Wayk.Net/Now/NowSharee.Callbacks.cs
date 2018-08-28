@@ -2,14 +2,16 @@
 {
     using System;
     using Devolutions.Wayk.Native;
-
     using static Native.NativeNow;
 
     public partial class NowSharee
     {
         private readonly NativeNowChannelCloseEventHandler onChannelCloseCallback = OnChannelCloseCallback;
         private readonly NativeNowChannelOpenEventHandler onChannelOpenCallback = OnChannelOpenCallback;
-        private readonly NativeNowVerifyCertificateEventHandler onVerifyCertificateCallback = OnVerifyCertificateCallback;
+
+        private readonly NativeNowVerifyCertificateEventHandler onVerifyCertificateCallback =
+            OnVerifyCertificateCallback;
+
         private readonly NativeNowGraphicsUpdateEventHandler onGraphicsUpdateCallback = OnGraphicsUpdateCallback;
         private readonly NativeNowSurfaceListRequestEventHandler onSurfaceListReqCallback = OnSurfaceListReqCallback;
         private readonly NativeNowSurfaceListResponseEventHandler onSurfaceListRspCallback = OnSurfaceListRspCallback;
@@ -69,7 +71,6 @@
                 return 0;
             }
 
-            //TODO: Add event
             return 1;
         }
 
@@ -96,7 +97,6 @@
                 return 0;
             }
 
-            //TODO: Add event
             return 1;
         }
 
@@ -109,7 +109,6 @@
                 return 0;
             }
 
-            //TODO: Add event
             return 1;
         }
 
@@ -122,7 +121,6 @@
                 return 0;
             }
 
-            //TODO: Add event
             return 1;
         }
     }

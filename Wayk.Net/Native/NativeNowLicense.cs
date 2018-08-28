@@ -30,7 +30,8 @@
         public static extern string NowLicense_GetExpirationString(IntPtr license);
 
         [DllImport(LibName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern bool NowLicense_GetExpirationDate(IntPtr license, ref int day, ref int month, ref int year);
+        public static extern bool
+            NowLicense_GetExpirationDate(IntPtr license, ref int day, ref int month, ref int year);
 
         [DllImport(LibName, CallingConvention = CallingConvention.Cdecl)]
         public static extern bool NowLicense_IsExpired(IntPtr license);

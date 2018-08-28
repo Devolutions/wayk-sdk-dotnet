@@ -87,51 +87,52 @@
 
         public bool Connect(string target, string password)
         {
-            sharee = new NowSharee();
-            den = new NowDen();
-            i18n = new NowI18n();
+            this.sharee = new NowSharee();
+            this.den = new NowDen();
+            this.i18n = new NowI18n();
 
-            den.EditEnter();
-            den.Url = NowDen.DefaultAddress;
-            den.Enabled = true;
-            den.OnDemand = true;
-            den.EditLeave();
+            this.den.EditEnter();
+            this.den.Url = NowDen.DefaultAddress;
+            this.den.Enabled = true;
+            this.den.OnDemand = true;
+            this.den.EditLeave();
 
-            if (!den.Start())
+            if (!this.den.Start())
             {
                 return false;
             }
 
-            sharee.Den = den;
+            this.sharee.Den = this.den;
 
-            sharee.Auth.OnAuthBegin += auth =>
+            this.sharee.Auth.OnAuthBegin += auth =>
             {
                 auth.Password = password;
                 auth.Type = NowAuthType.Srp;
                 auth.Init();
             };
 
-            bool connected = sharee.Connect(target);
+            bool connected = this.sharee.Connect(target);
 
             if (!connected)
             {
                 return false;
             }
 
-            sharee.OnGraphicsUpdate += (sharee, args) =>
+            this.sharee.OnGraphicsUpdate += (sharee, args) =>
             {
-                sharee.Codec.Decode(renderer.Buffer, renderer.Stride, args.X, args.Y, args.Width, args.Height, args.Buffer, args.BufferSize, args.CodecId);
-                renderer.Invalidate(args.X, args.Y, args.Width, args.Height);
+                sharee.Codec.Decode(this.renderer.Buffer, this.renderer.Stride, args.X, args.Y, args.Width, args.Height,
+                    args.Buffer, args.BufferSize, args.CodecId);
+                this.renderer.Invalidate(args.X, args.Y, args.Width, args.Height);
             };
 
-            sharee.Codec.SetSize(sharee.SurfaceWidth, sharee.SurfaceHeight);
-            renderer.Resize(sharee.SurfaceWidth, sharee.SurfaceHeight);
-            
-            sharee.Start();
+            this.sharee.Codec.SetSize(this.sharee.SurfaceWidth, this.sharee.SurfaceHeight);
+            this.renderer.Resize(this.sharee.SurfaceWidth, this.sharee.SurfaceHeight);
+
+            this.sharee.Start();
 
             return true;
         }
-        
+
         private void Control_MouseDown(object sender, MouseButtonEventArgs e)
         {
             Keyboard.Focus(this);
@@ -144,7 +145,8 @@
             Point position = GetPosition(e);
             MouseButtons buttons = GetButtons(e);
 
-            sharee.SendMouseEvent((byte)GetMouseFlags(buttons, buttons != MouseButtons.None), (int)position.X, (int)position.Y);
+            sharee.SendMouseEvent((byte)GetMouseFlags(buttons, buttons != MouseButtons.None), (int)position.X,
+                (int)position.Y);
         }
 
         private void Control_MouseUp(object sender, MouseButtonEventArgs e)
@@ -159,7 +161,8 @@
             Point position = GetPosition(e);
             MouseButtons buttons = GetButtons(e);
 
-            sharee.SendMouseEvent((byte)GetMouseFlags(buttons, buttons != MouseButtons.None), (int)position.X, (int)position.Y);
+            sharee.SendMouseEvent((byte)GetMouseFlags(buttons, buttons != MouseButtons.None), (int)position.X,
+                (int)position.Y);
         }
 
         private void Control_MouseMove(object sender, MouseEventArgs e)
@@ -167,7 +170,8 @@
             Point position = GetPosition(e);
             MouseButtons buttons = GetButtons(e);
 
-            sharee.SendMouseEvent((byte)GetMouseFlags(buttons, buttons != MouseButtons.None), (int)position.X, (int)position.Y);
+            sharee.SendMouseEvent((byte)GetMouseFlags(buttons, buttons != MouseButtons.None), (int)position.X,
+                (int)position.Y);
         }
 
         private void Control_MouseWheel(object sender, MouseWheelEventArgs e)
@@ -258,7 +262,7 @@
                 handled = true;
             }
         }
-        
+
         private void Self_Loaded(object sender, RoutedEventArgs e)
         {
             if (!DesignerProperties.GetIsInDesignMode(this))

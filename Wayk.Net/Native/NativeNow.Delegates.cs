@@ -32,7 +32,7 @@ namespace Devolutions.Wayk.Native
 
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
     internal delegate int NativeNowTerminatedEventHandler(IntPtr context, IntPtr sharee);
-    
+
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
     internal delegate int NativeNowKeyboardGetToggleKeysEventHandler(IntPtr context, IntPtr keyboard);
 
@@ -44,17 +44,6 @@ namespace Devolutions.Wayk.Native
 
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
     internal delegate int NativeNowKeyboardToggleEventHandler(IntPtr context, IntPtr keyboard, int toggle);
-
-
-
-
-
-
-
-
-
-
-
 
 
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
@@ -76,7 +65,8 @@ namespace Devolutions.Wayk.Native
     internal delegate int OnExecResultCallback(IntPtr context, IntPtr session, int status, IntPtr param);
 
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-    internal delegate int OnOutputCallback(IntPtr context, IntPtr session, IntPtr output, uint length, bool eof, IntPtr param);
+    internal delegate int OnOutputCallback(IntPtr context, IntPtr session, IntPtr output, uint length, bool eof,
+        IntPtr param);
 
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
     internal delegate bool OnPfpAnswerChallengeCallback(IntPtr context, string question, IntPtr answer, int maxAnswer);
@@ -86,10 +76,6 @@ namespace Devolutions.Wayk.Native
 
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
     internal delegate int OnTerminatedCallback(IntPtr context, IntPtr sharee);
-
-
-
-
 
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
     internal delegate int FileTransferAbortCallback(IntPtr context, IntPtr session, IntPtr abort);
@@ -121,10 +107,6 @@ namespace Devolutions.Wayk.Native
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
     internal delegate int FileTransferUpdateCallback(IntPtr context, IntPtr session);
 
-
-
-
-
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
     internal delegate int MouseCursorCallback(IntPtr context, IntPtr input, IntPtr cursor);
 
@@ -133,6 +115,4 @@ namespace Devolutions.Wayk.Native
 
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
     internal delegate int MouseStateCallback(IntPtr context, IntPtr input, byte state);
-
-
 }

@@ -6,7 +6,7 @@
     public class NowGraphicsUpdateEventArgs : EventArgs
     {
         public ushort CodecId { get; }
-        
+
         public ushort X { get; }
 
         public ushort Y { get; }
@@ -14,7 +14,7 @@
         public ushort Width { get; }
 
         public ushort Height { get; }
-        
+
         public uint BufferSize { get; }
 
         public IntPtr Buffer { get; }

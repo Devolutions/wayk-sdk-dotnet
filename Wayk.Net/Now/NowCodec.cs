@@ -1,7 +1,6 @@
 ﻿namespace Devolutions.Wayk.Now
 {
     using System;
-
     using static Native.NativeNow;
 
     public class NowCodec : NowObject
@@ -16,7 +15,8 @@
             NowCodec_SetSize(this, width, height);
         }
 
-        public void Decode(IntPtr destination, int dstStep, int x, int y, int width, int height, IntPtr source, uint sourceSize, ushort codecId)
+        public void Decode(IntPtr destination, int dstStep, int x, int y, int width, int height, IntPtr source,
+            uint sourceSize, ushort codecId)
         {
             NowCodec_Decode(this, destination, dstStep, x, y, width, height, source, sourceSize, codecId);
         }

@@ -2,7 +2,6 @@
 {
     using System;
     using Devolutions.Wayk.Native;
-
     using static Native.NativeNow;
 
     public partial class NowSharee : NowObject
@@ -44,10 +43,7 @@
 
         public NowDen Den
         {
-            set
-            {
-                NowSharee_SetDen(this, value);
-            }
+            set { NowSharee_SetDen(this, value); }
         }
 
         public void Start()

@@ -3,7 +3,6 @@
     using Devolutions.Wayk.Native;
     using System;
     using System.Runtime.InteropServices;
-
     using static Native.NativeNow;
 
     public partial class NowKeyboard
@@ -12,14 +11,6 @@
         private readonly NativeNowKeyboardKeyStateEventHandler onKeyboardKeyState = OnKeyboardKeyState;
         private readonly NativeNowKeyboardOuputEventHandler onKeyboardOuput = OnKeyboardOuput;
         private readonly NativeNowKeyboardToggleEventHandler onKeyboardToggle = OnKeyboardToggle;
-
-        private void RegisterCallbacks()
-        {
-            NowKeyboard_RegisterCallback(this, "OnOutput", onKeyboardOuput, this);
-            NowKeyboard_RegisterCallback(this, "GetToggleKeys", onKeyboardGetToggleKeys, this);
-            NowKeyboard_RegisterCallback(this, "OnToggle", onKeyboardToggle, this);
-            NowKeyboard_RegisterCallback(this, "GetKeyState", onKeyboardKeyState, this);
-        }
 
         private static int OnKeyboardGetToggleKeys(IntPtr context, IntPtr keyboard)
         {
@@ -77,6 +68,14 @@
             nowKeyboard.sharee.SendKeyboardEvent(flags, code);
 
             return 1;
+        }
+
+        private void RegisterCallbacks()
+        {
+            NowKeyboard_RegisterCallback(this, "OnOutput", this.onKeyboardOuput, this);
+            NowKeyboard_RegisterCallback(this, "GetToggleKeys", this.onKeyboardGetToggleKeys, this);
+            NowKeyboard_RegisterCallback(this, "OnToggle", this.onKeyboardToggle, this);
+            NowKeyboard_RegisterCallback(this, "GetKeyState", this.onKeyboardKeyState, this);
         }
     }
 }

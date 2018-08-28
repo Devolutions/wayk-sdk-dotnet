@@ -2,7 +2,6 @@
 {
     using System.Windows.Forms;
     using System.Windows.Forms.Integration;
-
     using WpfWaykControl = Wpf.WaykControl;
 
     public partial class WaykControl : ElementHost
@@ -14,7 +13,7 @@
             InitializeComponent();
 
             Child = waykControl = new WpfWaykControl();
-            
+
             waykControl.HorizontalAlignment = System.Windows.HorizontalAlignment.Stretch;
             waykControl.VerticalAlignment = System.Windows.VerticalAlignment.Stretch;
         }

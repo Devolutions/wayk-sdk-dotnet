@@ -5,7 +5,7 @@
     public partial class NowKeyboard : NowObject
     {
         private NowSharee sharee;
-        
+
         public NowKeyboard(NowSharee sharee)
             : base(NowKeyboard_New())
         {

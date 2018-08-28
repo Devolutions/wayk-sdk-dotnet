@@ -1,7 +1,6 @@
 ﻿namespace Devolutions.Wayk.Now
 {
     using System;
-
     using static Native.NativeNow;
 
     public class NowClipboardChannel : NowChannel
@@ -9,7 +8,6 @@
         public NowClipboardChannel(IntPtr context)
             : base(context)
         {
-
         }
 
         public override void Start()

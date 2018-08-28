@@ -46,6 +46,7 @@
         public static extern bool NowDen_RegisterCallback(IntPtr den, string name, Delegate function, IntPtr param);
 
         [DllImport(LibName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern int NowDen_Resolve(IntPtr den, string name, UInt32 peerId, int timeout, IntPtr cancelEvent);
+        public static extern int NowDen_Resolve(IntPtr den, string name, UInt32 peerId, int timeout,
+            IntPtr cancelEvent);
     }
 }

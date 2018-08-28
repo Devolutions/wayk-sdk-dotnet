@@ -44,7 +44,8 @@
                 return;
             }
 
-            hookID = User32.SetWindowsHookEx(User32.WH_KEYBOARD_LL, hookCallback, Kernel32.GetModuleHandle(Process.GetCurrentProcess().MainModule.ModuleName), 0);
+            hookID = User32.SetWindowsHookEx(User32.WH_KEYBOARD_LL, hookCallback,
+                Kernel32.GetModuleHandle(Process.GetCurrentProcess().MainModule.ModuleName), 0);
         }
 
         private static void Unhook()

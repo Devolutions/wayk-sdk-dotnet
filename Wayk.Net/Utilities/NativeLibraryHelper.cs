@@ -24,12 +24,13 @@
 
             if (string.IsNullOrEmpty(resourceName))
             {
-                throw new EmbeddedAssemblyLoadException($"Could not load library named \"{resourceName}\" from assembly {assembly.FullName}");
+                throw new EmbeddedAssemblyLoadException(
+                    $"Could not load library named \"{resourceName}\" from assembly {assembly.FullName}");
             }
 
             using (Stream stream = assembly.GetManifestResourceStream(resourceName))
             {
-                byte[] data = new BinaryReader(stream).ReadBytes((int)stream.Length);
+                byte[] data = new BinaryReader(stream).ReadBytes((int) stream.Length);
                 File.WriteAllBytes(dllPath, data);
                 Kernel32.LoadLibrary(dllPath);
             }

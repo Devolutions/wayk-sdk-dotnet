@@ -2,7 +2,6 @@
 {
     using System;
     using Devolutions.Wayk.Native;
-
     using static Native.NativeNow;
 
     public partial class NowAuth

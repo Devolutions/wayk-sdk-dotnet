@@ -1,7 +1,6 @@
 ﻿namespace Devolutions.Wayk.Now
 {
     using System;
-
     using static Native.NativeNow;
 
     public class NowFileTransferChannel : NowChannel
